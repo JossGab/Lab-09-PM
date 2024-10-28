@@ -54,12 +54,13 @@ fun ProgPrincipal9() {
     val urlBase = "https://jsonplaceholder.typicode.com/"
     val retrofit = Retrofit.Builder().baseUrl(urlBase)
         .addConverterFactory(GsonConverterFactory.create()).build()
+    val service = retrofit.create(PostApiService::class.java)
     val navController = rememberNavController()
 
     Scaffold(
         topBar =    { BarraSuperior() },
         bottomBar = { BarraInferior(navController) },
-        content =   { paddingValues -> Contenido(paddingValues, navController, servicio) }
+        content =   { paddingValues -> Contenido(paddingValues, navController, service) }
     )
 }
 
