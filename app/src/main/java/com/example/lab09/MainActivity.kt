@@ -146,16 +146,6 @@ fun Contenido(
 }
 
 @Composable
-fun ScreenPost(navController: NavHostController, servicio: PostApiService, int: Int) {
-    TODO("Not yet implemented")
-}
-
-@Composable
-fun ScreenPosts(navController: NavHostController, servicio: PostApiService) {
-    TODO("Not yet implemented")
-}
-
-@Composable
 fun ScreenInicio() {
     Text("INICIO")
 }
